@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather forecast</title>
+        <link href="main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div id="container">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar" style="height: 3.5vw; flex-direction: row;">
+            <span class="logo-nav" style="margin-left: 8.3vw;">mose weather</span>
+            <div class="dark-mode-back-nav">
+              <span></span>
+              <button class="dark-mode-circle-nav" id="darkBtn" onclick="darkClick()"></button>
+            </div>
+            </nav>
+            <div class="weather-field">
+              <div class="search-field">
+                <input type="text" id="searchInput" placeholder="Input city name" value="Odesa">
+                <button class="search-btn" onclick="searchWeather()">Search</button>
+              </div>
+              <hr>
+              <div class="weather-container">
+                <div class="weather-now">
+                  <span class="weather-now-day" id="weather-now-day"></span>
+                  <img id="weather-now-img">
+                  <span class="weather-now-temp" id="weather-now-temp"></span>
+                  <span class="weather-now-descr" id="weather-now-descr"></span>
+                  <div class="weather-now-more-info"> 
+                    <div class="weather-now-more-info-container">
+                      <span class="weather-now-more-info-header">Feels like</span>
+                      <hr>
+                      <span class="weather-now-more-info-span" id="feelslike">27</span>
+                    </div>
+                    <div class="weather-now-more-info-container">
+                      <span class="weather-now-more-info-header">Humidity</span>
+                      <hr>
+                      <span class="weather-now-more-info-span" id="humidity">27</span>
+                    </div>
+                  </div>
+                  <div class="weather-now-more-info"> 
+                    <div class="weather-now-more-info-container">
+                      <span class="weather-now-more-info-header">Max.temp</span>
+                      <hr>
+                      <span class="weather-now-more-info-span" id="maxtemp">27</span>
+                    </div>
+                    <div class="weather-now-more-info-container">
+                      <span class="weather-now-more-info-header">Min.temp</span>
+                      <hr>
+                      <span class="weather-now-more-info-span" id="mintemp">27</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="forecasts-field">
+                  <div class="hourly-forecast">
+                    <span class="hourly-forecast-header">HOURLY FORECAST</span>
+                    <hr>
+                    <div class="hourly-cards">
+                      <button class="hourly-card" id="hourly1" onclick="peekAnotherHour(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="hourly2" onclick="peekAnotherHour(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="hourly3" onclick="peekAnotherHour(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="hourly4" onclick="peekAnotherHour(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="hourly5" onclick="peekAnotherHour(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="day5-forecast">
+                    <span class="hourly-forecast-header">5 DAYS FORECAST</span>
+                    <hr>
+                    <div class="hourly-cards">
+                      <button class="hourly-card" id="day1" onclick="peekAnotherDay(this)">  
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="day2" onclick="peekAnotherDay(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="day3" onclick="peekAnotherDay(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="day4" onclick="peekAnotherDay(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                      <button class="hourly-card" id="day5" onclick="peekAnotherDay(this)">
+                        <span class="btn-id"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="more-info">
+                    <span class="your-city-span" id="your-city-name">ODESA</span>
+                    <hr>
+                    <div class="more-info-container">
+                      <div class="more-info-container-card">
+                        <span class="more-info-header">POPULATION</span>
+                        <hr>
+                        <img src="weatherIcons/population.png" class="more-info-population">
+                        <span class="population-span" id="population"></span>
+                      </div>
+                      <div class="more-info-container-card">
+                        <span class="more-info-header">SUNRISE</span>
+                        <hr>
+                        <img src="weatherIcons/sunrise.png" class="more-info-sunrise">
+                        <span class="sunrise-sunset-time" id="sunrise-time"></span>
+                      </div>
+                      <div class="more-info-container-card">
+                        <span class="more-info-header">SUNSET</span>
+                        <hr>
+                        <img src="weatherIcons/sunset.png" class="more-info-sunset">
+                        <span class="sunrise-sunset-time" id="sunset-time"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+        <script src="js/pagescroll.js"></script>
+        <script src="js/darkmode.js"></script>
+    </body>
+</html>

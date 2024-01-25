@@ -1,0 +1,447 @@
+@font-face {
+    font-family: 'TeX Gyre Adventor';
+    src: url(TeXGyreAdventor-Regular.ttf) format('truetype');
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    background-size: cover; 
+    background: rgb(176,208,222);
+    background: linear-gradient(180deg, rgba(176,208,222,1) 0%, rgba(137,156,164,1) 100%);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.logo-nav
+{
+    margin-left: 2vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.scrolled-nav-bar {
+    background-color: rgba(17,17,17,0.4);
+    transition: 0.3s;
+}
+.navbar:not(.scrolled-nav-bar){
+    background-color: transparent;
+    transition: 0.3s;
+}
+#navbarCollapse
+{
+    margin-top: 0.2vw;
+    margin-left: 1vw;
+}
+#searchInput
+{
+    align-self: flex-start;
+    margin-left: 3vw;
+    margin-right: 2vw;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 15vw;
+    height: 2vw;
+    color: black;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    padding-left: 1vw;
+}
+.nav-item-weather
+{
+    margin-top: 0.3vw;
+    margin-right: 1vw;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.search-btn
+{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: black;
+    width: 5vw;
+    transition: 0.3s ease-in-out;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.search-btn :hover
+{
+    background-color: rgb(255, 255, 255, 0.5);
+}
+.weather-field
+{
+    display: flex;
+    flex-direction: column;
+    background: rgb(0, 0, 0, 0.3);
+    width: 90vw;
+    margin-right: 3vw;
+    margin-top: 3.5vw;
+    margin-left: 5vw;
+    margin-bottom: 10vw;
+    height: auto;
+    border-radius: 20px;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.weather-field hr
+{
+    border: 1px solid white;
+}
+.hourly-weather-field
+{
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+#hourly-logo
+{
+    font-size: 3vw;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.hourly-cards
+{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.hourly-card
+{
+    display: flex;
+    flex-direction: column;
+    width: 6vw;
+    height: 7vw;
+    background-color: transparent;
+    border-radius: 20px;
+    border: transparent;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+.hourly-card:hover
+{
+    background-color: rgba(187, 187, 187, 0.1)
+}
+.card-head
+{
+    color: white;
+    font-size: 0.9vw;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    align-self: center;
+    margin-top: 0.4vw;
+}
+.card-temp
+{
+    color: white;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    align-self: center;
+    margin-top: -0.2vw;
+    font-size: 1.5vw;
+    margin-left: 0.6vw;
+}
+.card-wind
+{
+    color: white;
+    margin-left: 3vw;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.card-time
+{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1.5vw;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+}
+.card-img
+{
+    max-width: 1.8vw;
+    width: 1vw;
+    align-self: center;
+    margin-top: -0.4vw;
+}
+.card-img2
+{
+    max-width: 4vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-left: 2vw;
+}
+.card-img3
+{
+    max-width: 4vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    
+}
+.start-screen
+{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    align-items: center;
+    width: 100%;
+    margin-top: 7.5vw;
+}
+.start-description
+{
+    font-size: 0.8vw;
+    color: rgb(193, 193, 193);
+    width: 40%;
+    text-align: center;
+}
+.enter-city
+{
+    display: flex;
+    flex-direction: column;
+    color: rgb(178, 178, 178);
+    font-weight: bold;
+    font-size: 3vw;
+    align-items: center;
+    width: 100%;
+    margin-top: 12vw;
+    transition: 0.2s ease-in-out;
+    opacity: 1;
+}
+.search-field
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vw;
+}
+.weather-container
+{
+    display: flex;
+    flex-direction: row;
+}
+.weather-now
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.4);
+    width: 37vw;
+    height: 42vw;
+    margin-top: 2vw;
+    margin-left: 3vw;
+    border-radius: 20px;
+}
+.forecasts-field
+{
+    display: flex;
+    flex-direction: column;
+}
+.hourly-forecast
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.4);
+    width: 44vw;
+    height: 12vw;
+    margin-top: 2vw;
+    margin-left: 3vw;   
+    border-radius: 20px;
+}
+.hourly-forecast-header
+{
+    margin-left: 1vw;
+    margin-top: 0.7vw;
+    margin-bottom: -0.3vw;
+    font-weight: bold;
+    color: rgb(187, 187, 187);
+}
+.day5-forecast
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.4);
+    width: 44vw;
+    height: 12vw;
+    margin-top: 2vw;
+    margin-left: 3vw;   
+    border-radius: 20px;
+}
+.weather-now-day
+{
+    align-self: center;
+    font-size: 1.5vw;
+    color: white;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    margin-top: 2vw;
+}
+#weather-now-img
+{
+    max-width: 8vw;font-family: 'TeX Gyre Adventor', sans-serif;
+    align-self: center;
+    margin-top: 2vw;
+}
+.weather-now-temp
+{
+    align-self: center;
+    font-size: 2.5vw;
+    color: white;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    margin-top: 1vw;
+}
+.weather-now-descr
+{
+    align-self: center;
+    font-size: 1.5vw;
+    color: white;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    margin-top: 1vw;
+}
+.weather-now-more-info
+{
+    display: flex;
+    flex-direction: row;
+    width: 33vw;
+    height: 20vw;
+    margin-top: 1.5vw;
+    margin-left: 4vw;
+    gap: 9vw;
+}
+.weather-now-more-info-container
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(20, 24, 24, 0.111);
+    width: 10vw;
+    height: 8vw;
+    border-radius: 20px;
+}
+.weather-now-more-info-container hr
+{
+    border: 1px solid white;
+}
+.weather-now-more-info-header
+{
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    color: rgb(187, 187, 187);
+    align-self: center;
+    margin-top: 0.5vw;
+    margin-bottom: -0.5vw;
+}
+.weather-now-more-info-span
+{
+    color: white;
+    align-self: center;
+    margin-top: 0.1vw;
+    font-size: 2vw;
+}
+.btn-id
+{
+    display: none;
+}
+.more-info
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.4);
+    width: 44vw;
+    height: 14vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    margin-left: 3vw;   
+    border-radius: 20px;
+}
+.your-city-span
+{
+    color: rgb(187, 187, 187);
+    margin-left: 1vw;
+    margin-top: 0.7vw;
+    margin-bottom: -0.3vw;
+    font-weight: bold;
+    color: rgb(187, 187, 187);
+}
+.your-city-span hr
+{
+    border: 1px solid white;
+}
+.more-info-container
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2vw;
+    gap: 8vw;
+}
+.more-info-container-card
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.1);
+    width: 8vw;
+    height: 10vw;
+    border-radius: 20px;
+}
+.more-info-header
+{
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    color: rgb(187, 187, 187);
+    align-self: center;
+    margin-top: 0.5vw;
+    margin-bottom: -0.5vw;
+}
+.more-info-sunrise
+{
+    max-height: 7vw;
+    width: 5vw;
+    align-self: center;
+}
+.more-info-sunset
+{
+    max-height: 6.1vw;
+    width: 4.1vw;
+    align-self: center;
+}
+.sunrise-sunset-time
+{
+    color: white;
+    margin-top: 0.4vw;
+    align-self: center;
+    font-size: 1.2vw;
+}
+.more-info-population
+{
+    max-height: 4vw;
+    width: 4vw;
+    align-self: center;
+}
+.population-span
+{
+    color: white;
+    margin-top: 0.5vw;
+    align-self: center;
+    font-size: 1.2vw;
+}
+
+/*============DARK MODE============*/
+
+.dark-mode-back-nav
+{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(17,17,17,0.4);
+    border-radius: 20px;
+    width: 3vw;
+    height: 1.6vw;
+    margin-left: 70vw;
+}
+.dark-mode-circle-nav
+{
+    background-color: white;
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 20px;
+    margin-top: 0.2vw;
+    margin-left: 0.2vw;
+    border: 0px;
+    transition: 0.3s;
+}
