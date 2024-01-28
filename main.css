@@ -13,6 +13,7 @@ body{
     display: flex;
     flex-direction: column;
     font-family: 'TeX Gyre Adventor', sans-serif;
+    transition: ease-in-out 3s;
 }
 .logo-nav
 {
@@ -424,6 +425,14 @@ body{
 
 /*============DARK MODE============*/
 
+.dark-mode-span
+{
+    margin-left: 61.2vw;
+    font-family: 'TeX Gyre Adventor', sans-serif;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: bold; 
+}
 .dark-mode-back-nav
 {
     display: flex;
@@ -432,7 +441,7 @@ body{
     border-radius: 20px;
     width: 3vw;
     height: 1.6vw;
-    margin-left: 70vw;
+    margin-left: 1vw;
 }
 .dark-mode-circle-nav
 {
@@ -444,4 +453,26 @@ body{
     margin-left: 0.2vw;
     border: 0px;
     transition: 0.3s;
+}
+.sun-pic-img
+{
+    width: 1vw;
+    height: 1vw;
+    margin-left: -0.2vw;
+    margin-top: -0.3vw;
+    transition: ease-in-out 0.3s;
+}
+.moon-pic-img
+{
+    width: 0.8vw;
+    height: 0.8vw;
+    margin-left: -0.1vw;
+    margin-top: -0.3vw;
+    display: none;
+    transition: ease-in-out 0.3s;
+}
+.dark-body
+{
+    background: rgb(15,72,97);
+    background: linear-gradient(180deg, rgba(15,72,97,1) 0%, rgba(12,46,61,1) 100%);
 }
